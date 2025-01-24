@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana's Celebrity Recognition Fun!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Jana's Celebrity Recognition ✨</h1>
+            <p class="sub-header">Upload a photo, and let the magic unfold! 🎥</p>
+        </div>
+
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="uploadButton" onclick="sendImage()">🚀 Upload & Recognize</button>
+        </div>
+
+        <div id="imagePreview" style="margin-top: 20px;"></div>
+
+        <div id="result" class="result">
+            <h2>Results 🎯</h2>
+            <div id="celebrities" class="celebrities"></div>
+            <div id="emotions" class="emotions"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Global styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(45deg, #ff6f61, #ffca28, #00bcd4, #8bc34a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Animation for gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 600px;
+    border: 5px solid #ffca28;
+}
+
+/* Header styling */
+.header h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    animation: headerAnimation 2s ease-out;
+}
+
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Updated sub-header color */
+.sub-header {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #ff6f61, #ffca28, #00bcd4);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.upload-section input[type="file"] {
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #00bcd4;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.upload-section button {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section button:hover {
+    background-color: #ff3d29;
+}
+
+.result {
+    margin-top: 30px;
+    display: none;
+    font-size: 18px;
+}
+
+.celebrities, .emotions {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.celebrities p, .emotions p {
+    margin: 5px 0;
+}
+
+.emotions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.emotions li {
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Fun hover effects for result */
+.celebrities p, .emotions li {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.celebrities p:hover, .emotions li:hover {
+    transform: scale(1.05);
+    background-color: #ffe082;
+}
+
+/* Adding emoji to sections */
+.celebrities:before {
+    content: "🌟 ";
+    font-size: 2rem;
+}
+
+.emotions:before {
+    content: "😄 ";
+    font-size: 2rem;
+}
